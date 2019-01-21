@@ -1,0 +1,624 @@
+@font-face {
+    font-family: "AladdinRegular";
+    src: url("../fonts/AladdinRegular/AladdinRegular.eot");
+    src: url("../fonts/AladdinRegular/AladdinRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/AladdinRegular/AladdinRegular.woff") format("woff"),
+    url("../fonts/AladdinRegular/AladdinRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "AirportRegular";
+    src: url("../fonts/AirportRegular/AirportRegular.eot");
+    src: url("../fonts/AirportRegular/AirportRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/AirportRegular/AirportRegular.woff") format("woff"), url("../fonts/AirportRegular/AirportRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'kobzar_ksregular';
+    src: url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.eot');
+    src: url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.woff2') format('woff2'), url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.woff') format('woff'), url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.ttf') format('truetype'), url('../fonts/KobzarKSRegular/kobzarks_v1-020-webfont.svg#kobzar_ksregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*===========general===========*/
+
+:root {
+    --main-color: #29c5e6;
+    --text-color: #777;
+    --text-color2: #555;
+    --text-color3: #fff;
+    --background-color: #eee;
+    --gugi: 'Gugi', cursive;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+a,
+span {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Gugi', cursive; */
+
+body {
+    background: url('../img/bg.png');
+    font-family: 'Roboto', sans-serif
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.img-fluid {
+    width: 100%;
+    display: block;
+    height: auto;
+    align-self: center;
+}
+
+/*===========main=============*/
+
+.header {
+    padding: 15px 0 25px 0;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--text-color2);
+    padding: 7px 20px;
+    position: relative;
+}
+
+.logo:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-color);
+}
+
+.menu li {
+    flex: 1 0 0;
+}
+
+.menu a {
+    padding: 10px 20px;
+    background: var(--background-color);
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition: all .3s ease;
+    width: 100%;
+    justify-content: center;
+    background: var(--background-color);
+}
+
+.menu a:hover {
+    background: var(--main-color);
+    color: var(--text-color3);
+}
+
+.panel {
+    width: 500px;
+    background: #000;
+    border: 5px ridge #aaa;
+    margin: 50px auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.panel>p {
+    color: #f00;
+    font-size: 30px;
+    font-family: monospace;
+    text-transform: uppercase;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    left: 110%;
+    animation: run-str 10s linear infinite;
+}
+
+@keyframes run-str {
+    100% {
+        left: 0;
+        transform: translateX(-110%);
+    }
+}
+
+.anime {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: url('../img/run-sprite.png') no-repeat 0 0 / 1200px;
+    animation: man-run .3s steps(9) infinite, run 20s linear infinite;
+}
+
+@keyframes man-run {
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+@keyframes run {
+    30% {
+        transform: translate(calc((100vw - 100%) - 17px), 0) rotate(0);
+    }
+    30.1% {
+        transform: translate(calc((100vw - 100%) - 17px), 0) rotate(-90deg);
+    }
+    50% {
+        transform: translate(calc((100vw - 100%) - 17px), calc( -1 * (100vh - 100%))) rotate(-90deg);
+    }
+    50.1% {
+        transform: translate(calc((100vw - 100%) - 17px), calc( -1 * (100vh - 100%))) rotate(-180deg);
+    }
+    80% {
+        transform: translate(0, calc( -1 * (100vh - 100%))) rotate(-180deg);
+    }
+    80.1% {
+        transform: translate(0, calc( -1 * (100vh - 100%))) rotate(-270deg);
+    }
+    99.99% {
+        transform: translate(0, 0) rotate(-270deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.about-us {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--text-color2);
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.about-us>span {
+    margin: 0 10px;
+}
+
+.about-us:before,
+.about-us:after {
+    content: '';
+    width: 15px;
+    background: repeating-linear-gradient(135deg, transparent 0px, transparent 3px, var(--text-color2) 3px, var(--text-color2) 4px) no-repeat;
+}
+
+.about-us:after {
+    flex: 1 0 0;
+}
+
+.block-content {
+    display: flex;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.sidebar-menu {
+    border: 1px solid var(--text-color);
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar-menu>li+li {
+    border-top: 1px solid var(--text-color);
+}
+
+.sidebar-menu a {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.sidebar-menu a:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--text-color2);
+    margin-right: 5px;
+    transition: all .3s ease;
+} 
+
+.sidebar-menu a:hover {
+    color: var(--main-color);
+}
+
+.sidebar-menu a:hover:before {
+    background: var(--main-color);
+}
+
+.offices {
+    position: sticky;
+    top: 260px;
+}
+
+.offices h4 {
+    font-size: 16px;
+    color: var(--text-color3);
+    background: var(--main-color);
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.offices .img-wrap {
+    padding: 10px;
+    background: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-top: 0;
+}
+
+.main-content {
+    flex: 1 0 0;
+    justify-content: center;
+}
+
+.text .blockquote {
+    background: var(--main-color);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blockquote p:first-child {
+    color: var(--text-color3);
+    font-size: 40px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-family: 'kobzar_ksregular';
+}
+
+.blockquote p:last-child {
+    color: var(--text-color);
+    font-size: 18px;
+    text-align: right;
+}
+
+.article>p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.main-content .img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.main-content .img-wrap>img {
+    width: 47%;
+    border: 3px solid var(--background-color);
+    outline: 1px solid var(--text-color);
+}
+
+.gallery h3 {
+    font-size: 40px;
+    color: var(--text-color3);
+    background: var(--main-color);
+    text-transform: uppercase;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.gallery-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.teammate {
+    width: 17%;
+    margin-bottom: 20px;
+}
+
+.teammate>img {
+    border: 3px solid var(--background-color);
+    outline: 1px solid var(--text-color);
+    margin-bottom: 5px;
+}
+
+.teammate h5 {
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.teammate h6 {
+    color: var(--main-color);
+}
+
+/*
+.wrap{
+    position: relative;
+    min-height: 500px;
+    background: url('../img/background.png');
+    animation: animeBg 7s linear infinite;
+}
+
+@keyframes animeBg {
+    0%{
+        background-position-x: 0%;
+    }
+    
+    100%{
+        background-position-x: 100%;
+    }
+    
+}
+
+.zombie{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background:url('../img/Zombie-Character.jpg') no-repeat 0 0 / 1200px;
+    animation: zombie-run .3s steps(9) infinite, run 10s linear infinite;
+}
+@keyframes zombie-run{
+    100%{
+        background-position-x: 100%;
+    }
+}
+.santa{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background:url('../img/run-sprite.png') no-repeat 0 0 / 1200px;
+    animation: santa-run .3s steps(9) infinite, run 10s linear infinite;
+}
+@keyframes santa-run{
+    100%{
+        background-position-x: 100%;
+    }
+}
+.footer {
+    width: 1200px;
+    min-height: 150px;
+}
+*/
+/*=======иконочные шрифты=========*/
+.icon1 {
+    font-size: 25px;
+    color: green;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.icon1:before,
+.icon1:after {
+    font-size: 50px;
+    color: #0f0;
+    margin-right: 15px;
+}
+
+.icon2 {
+    font-size: 25px;
+    color: green;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.icon2:before {
+    animation: spin 1s steps(8) infinite;
+    transform: scale(.5) rotate(0);
+}
+
+@keyframes spin {
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.icon2:before,
+.icon2:after {
+    font-size: 50px;
+    color: #0f0;
+    margin-right: 15px;
+}
+
+
+/*=======p с шрифтами=============*/
+.fonts p{
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-family: serif;
+}
+/*=======безопасный шрифт==============*/
+.fonts p:first-child{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+/*=======шрифт с fonts.google.com======*/
+.fonts p:nth-child(2){
+    font-family: 'Lobster Two', cursive;
+}
+/*=======шрифт с fonts4web.ru======*/
+.fonts p:nth-child(3){
+    font-family: "AladdinRegular";
+}
+/*=======шрифт сгенерированный на Fontsquirrel======*/
+.fonts p:last-child, .wrap-font>p:first-child{
+    font-family: 'kobzar_ksregular';
+}
+.wrap-font p{
+    margin-top: 10px;
+    color: var(--text-color);
+    font-family: 'Indie Flower', cursive;
+}
+
+.footer{
+    min-height: 500px;
+}
